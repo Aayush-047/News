@@ -19,7 +19,7 @@ newsRouter.post('',async(req,res)=>{
         //newsapi.org
         const newsApi=await axios.get(`https://newsapi.org/v2/top-headlines?q=${search}&country=in&apiKey=1cae66d962dd4bd79605225239347d7d`);
         // console.log(newsApi.data); 
-        res.render('newssearch',{articles:newsApi.data});    
+        res.render('newsSearch',{articles:newsApi.data});    
     } catch (error) {
         console.log(error);
     }
